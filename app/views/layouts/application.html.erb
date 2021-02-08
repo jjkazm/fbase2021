@@ -4,12 +4,27 @@
     <title>Fbase2021</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
     <%= yield %>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyBoACh5ugZSnZbTFU7QnoZlKQViaDaDivs",
+        authDomain: "fbase-2021-test.firebaseapp.com",
+        projectId: "fbase-2021-test",
+        storageBucket: "fbase-2021-test.appspot.com",
+        messagingSenderId: "45690471389",
+        appId: "1:45690471389:web:aa0d6321b2c4ffa12aac34"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
   </body>
 </html>
